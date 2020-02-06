@@ -8,8 +8,13 @@ const app = express();
 
 // route handler and associate with a given route
 app.get('/', (req, res) => {
-  res.send({hi: 'there'})
+  res.send({ hi: 'there' });
 });
 
-// route to port 5000
-app.listen(5000);
+// dynamic port adding in prod, heroku will later inject env variables in runtime, pass runtime config
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
+
+
+
+// specicy start script,
