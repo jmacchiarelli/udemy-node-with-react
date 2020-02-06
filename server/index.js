@@ -4,7 +4,7 @@ const app = express();
 
 // create a route handler, associate with given route
 app.get('/', (req, res) => {
-  res.send({ hi: 'there' });
+  res.send({ go: 'memphis grizzlies' });
 });
 
 // dynamic port binding
